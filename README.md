@@ -35,7 +35,7 @@ If this saves you some setup time, you can [buy me a coffee](https://buymeacoffe
 
 1. Get `Local-Hosting-1.0.zip` from the [latest release](https://github.com/eduardmpopescu/Local-Hosting/releases/latest) and unzip it.
 2. Drag **Local Hosting** to your Applications folder.
-3. The app is signed ad hoc, so the first time you open it, right-click it and choose **Open**.
+3. Open the app. macOS will say it can't verify it, because the app is signed ad hoc. Click **Done**, then open **System Settings → Privacy & Security**, scroll down to the message about Local Hosting and click **Open Anyway**. Confirm with your password. You only need to do this once.
 
 The download is for Apple Silicon Macs. On an Intel Mac, build it yourself.
 
