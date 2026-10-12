@@ -31,7 +31,15 @@ If this saves you some setup time, you can [buy me a coffee](https://buymeacoffe
 
 ## Install
 
-There's no download yet, so you build it yourself:
+### Download
+
+1. Get `Local-Hosting-1.0.zip` from the [latest release](https://github.com/eduardmpopescu/Local-Hosting/releases/latest) and unzip it.
+2. Drag **Local Hosting** to your Applications folder.
+3. The app is signed ad hoc, so the first time you open it, right-click it and choose **Open**.
+
+The download is for Apple Silicon Macs. On an Intel Mac, build it yourself.
+
+### Build it yourself
 
 ```bash
 git clone https://github.com/eduardmpopescu/Local-Hosting.git
@@ -40,8 +48,6 @@ cd Local-Hosting
 ./build.sh             # builds "build/Local Hosting.app"
 ./build.sh --install   # also copies it to /Applications
 ```
-
-The app is signed ad hoc, so the first time you open it, right-click it and choose **Open**.
 
 ## First run
 
