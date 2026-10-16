@@ -23,8 +23,14 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     let state = AppState()
     private var isTerminating = false
 
-    /// Quitting stops the web servers and database servers and removes the /etc/hosts entries,
-    /// so every domain points back at the real internet.
+    /// Closing the window (the red X) only hides it: the app, its servers and its databases keep
+    /// running and stay in the Dock. Clicking the Dock icon brings the window back.
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool { false }
+
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool { true }
+
+    /// Quitting (Cmd-Q or Quit in the menu) stops the web servers and database servers and removes
+    /// the /etc/hosts entries, so every domain points back at the real internet.
     func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
         if isTerminating { return .terminateLater }
         isTerminating = true
